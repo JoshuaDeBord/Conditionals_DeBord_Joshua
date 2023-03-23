@@ -30,14 +30,43 @@ namespace Conditionals_DeBord_Joshua
                     Console.WriteLine($"{myWholeNumber} is an odd number.");  //prints out if the user inputed amount is a odd number
                 }
 
-                int number1 = 4;  //Creates an integer called number1 with the value of 6
-                int number2 = 82;  //Creates an integer called number2 with the value of 99
+                int number1 = 6;  //Creates an integer called number1 with the value of 6
+                int number2 = 99;  //Creates an integer called number2 with the value of 99
 
                 int firstMax = Math.Max(myWholeNumber, number1);  //creates an integer called firstMax
                 int max = Math.Max(firstMax, number2);  //creates an integer called max.
 
 
                 Console.WriteLine($"The maximum number of {myWholeNumber}, {number1}, and {number2} is {max}.");  //tells the user the maximum number out of myWholeNumber, number1, and number2.
+
+
+                Console.WriteLine("Enter a grade (A, B, C, D, F).");  //asks the user to enter a grade and assigns it to a the char variable grade
+                char grade = Console.ReadKey().KeyChar;
+
+                switch (grade)    //prints description based on grade value
+                {
+                    case 'A':
+                        Console.WriteLine("\nSuperior");
+                        break;
+                    case 'B':
+                        Console.WriteLine("\nvery good");
+                        break;
+                    case 'C':
+                        Console.WriteLine("\nAverage");
+                        break;
+                    case 'D':
+                        Console.WriteLine("\nBelow Average");
+                        break;
+                    case 'F':
+                        Console.WriteLine("\nFail");
+                        break;
+                    default:
+                        Console.WriteLine("\nYou entered a valid grade");
+                        break;
+
+                }
+                    
+
 
 
             }
